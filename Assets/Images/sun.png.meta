@@ -1,10 +1,58 @@
 fileFormatVersion: 2
-guid: ec6725904a04b6941903e21a876949de
+guid: 1323cf168aebaf64b99ee87c47ba939e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4571828015118065507
-    second: back_0
+      213: 605162050437240712
+    second: sun_0
+  - first:
+      213: 2478982479046213345
+    second: sun_1
+  - first:
+      213: -7018185981625310791
+    second: sun_2
+  - first:
+      213: 8847054276605350839
+    second: sun_3
+  - first:
+      213: 3952879686552239645
+    second: sun_4
+  - first:
+      213: -7744155527204253199
+    second: sun_5
+  - first:
+      213: -6373571496263104676
+    second: sun_6
+  - first:
+      213: -5940756552861533841
+    second: sun_7
+  - first:
+      213: 468680197273812724
+    second: sun_8
+  - first:
+      213: 4442574253925732440
+    second: sun_9
+  - first:
+      213: -490102712262814433
+    second: sun_10
+  - first:
+      213: -1763991846330348779
+    second: sun_11
+  - first:
+      213: -9150183718733966593
+    second: sun_12
+  - first:
+      213: 5604671024201633523
+    second: sun_13
+  - first:
+      213: 2692654671801645899
+    second: sun_14
+  - first:
+      213: 4401876727579416039
+    second: sun_15
+  - first:
+      213: -4781161743351603865
+    second: sun_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +96,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -87,33 +135,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -126,23 +148,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: back_0
+      name: sun_5
       rect:
         serializedVersion: 2
-        x: 124
-        y: 124
-        width: 264
-        height: 264
+        x: 0
+        y: 0
+        width: 2349
+        height: 2479
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9065b094aa9d80c0800000000000000
-      internalID: -4571828015118065507
+      spriteID: 1f1dc9b049b378490800000000000000
+      internalID: -7744155527204253199
       vertices: []
       indices: 
       edges: []
@@ -151,7 +173,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a1d4fd73584e074eab9cb281283f5c5
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +183,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      back_0: -4571828015118065507
+      sun_0: 605162050437240712
+      sun_1: 2478982479046213345
+      sun_10: -490102712262814433
+      sun_11: -1763991846330348779
+      sun_12: -9150183718733966593
+      sun_13: 5604671024201633523
+      sun_14: 2692654671801645899
+      sun_15: 4401876727579416039
+      sun_16: -4781161743351603865
+      sun_2: -7018185981625310791
+      sun_3: 8847054276605350839
+      sun_4: 3952879686552239645
+      sun_5: -7744155527204253199
+      sun_6: -6373571496263104676
+      sun_7: -5940756552861533841
+      sun_8: 468680197273812724
+      sun_9: 4442574253925732440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

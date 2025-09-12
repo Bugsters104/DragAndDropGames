@@ -13,4 +13,4 @@ Unity 2D Drag And Drop games for children +6
 - [ ] Create camera script for zoom-in/out and camera restrictions
 - [x] Create animated main menu with 3 buttons, sound, animated objects 
 - [x] Create C# script for scene change and quit option
-- [ ] Create game timer (HH:MM:SS)
+- [x] Create game timer (HH:MM:SS)

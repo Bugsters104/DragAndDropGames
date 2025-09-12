@@ -23,7 +23,7 @@ public class TransformationScript : MonoBehaviour
                 {
                     objScript.lastDragged.GetComponent<RectTransform>().transform.localScale = 
                         new Vector3(objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x,
-                        objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y+0.005f,
+                        objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y+0.001f,
                         1f);
                 }
             }
@@ -33,7 +33,7 @@ public class TransformationScript : MonoBehaviour
                 {
                     objScript.lastDragged.GetComponent<RectTransform>().transform.localScale =
                         new Vector3(objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x,
-                        objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y - 0.005f,
+                        objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y - 0.001f,
                         1f);
                 }
             }
@@ -42,7 +42,7 @@ public class TransformationScript : MonoBehaviour
                 if (objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x > 0.3f)
                 {
                     objScript.lastDragged.GetComponent<RectTransform>().transform.localScale =
-                        new Vector3(objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x - 0.005f,
+                        new Vector3(objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x - 0.001f,
                         objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y,
                         1f);
                 }
@@ -52,7 +52,7 @@ public class TransformationScript : MonoBehaviour
                 if (objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x < 0.9f)
                 {
                     objScript.lastDragged.GetComponent<RectTransform>().transform.localScale =
-                        new Vector3(objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x + 0.005f,
+                        new Vector3(objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x + 0.001f,
                         objScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y,
                         1f);
                 }
