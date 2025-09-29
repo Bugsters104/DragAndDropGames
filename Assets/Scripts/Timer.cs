@@ -1,23 +1,50 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; 
 
 public class Timer : MonoBehaviour
 {
-    public Text timerText;
-    private float elapsedTime;
+    public Text timerText;  
+    public float elapsedTime { get; private set; }  
+
+    void Start()
+    {
+        ResetTimer();  
+    }
 
     private void Update()
     {
         elapsedTime += Time.deltaTime;
 
-        int hours =
-            Mathf.FloorToInt(elapsedTime / 3600);
-        int minutes =
-            Mathf.FloorToInt((elapsedTime % 3600) / 60);
-        int seconds =
-            Mathf.FloorToInt(elapsedTime % 60);
+        int hours = Mathf.FloorToInt(elapsedTime / 3600);
+        int minutes = Mathf.FloorToInt((elapsedTime % 3600) / 60);
+        int seconds = Mathf.FloorToInt(elapsedTime % 60);
 
-        timerText.text =
-            string.Format("{0:00} : {1:00} : {2:00}", hours, minutes, seconds);
+        if (timerText != null)
+        {
+            timerText.text = string.Format("{0:00} : {1:00} : {2:00}", hours, minutes, seconds);
+        }
+        else
+        {
+            Debug.LogError("TimerText is null! Assign a Text component in the Inspector.");
+        }
+    }
+
+    public void StopTimer()
+    {
+        enabled = false;  
+    }
+
+    public void ResetTimer()
+    {
+        elapsedTime = 0f;
+        enabled = true;  
+        if (timerText != null)
+        {
+            timerText.text = "00 : 00 : 00";  
+        }
+        else
+        {
+            Debug.LogError("TimerText is null on Reset! Assign a Text component in the Inspector.");
+        }
     }
 }

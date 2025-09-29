@@ -4,58 +4,44 @@ public class TransformationScript : MonoBehaviour
 {
     public ObjectScript objScript;
 
-
     void Update()
     {
-        if(ObjectScript.lastDragged != null)
+        if (ObjectScript.lastDragged != null)
         {
+            RectTransform rect = ObjectScript.lastDragged.GetComponent<RectTransform>();
+
             if (Input.GetKey(KeyCode.Z))
             {
-                ObjectScript.lastDragged.GetComponent<RectTransform>().transform.Rotate(0, 0, Time.deltaTime * 20f);
+                rect.transform.Rotate(0, 0, Time.deltaTime * 20f);
             }
+
             if (Input.GetKey(KeyCode.X))
             {
-                ObjectScript.lastDragged.GetComponent<RectTransform>().transform.Rotate(0, 0, -Time.deltaTime * 20f);
+                rect.transform.Rotate(0, 0, -Time.deltaTime * 20f);
             }
+
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                if(ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y < 0.9f)
-                {
-                    ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale = 
-                        new Vector3(ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x,
-                        ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y+0.001f,
-                        1f);
-                }
+                if (rect.transform.localScale.y < 1.2f)  // Расширили max
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x, rect.transform.localScale.y + 0.01f, 1f);  // Ускорили шаг
             }
+
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                if (ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y > 0.3f)
-                {
-                    ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale =
-                        new Vector3(ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x,
-                        ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y - 0.001f,
-                        1f);
-                }
+                if (rect.transform.localScale.y > 0.2f)  // Расширили min
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x, rect.transform.localScale.y - 0.01f, 1f);  // Ускорили шаг
             }
+
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                if (ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x > 0.3f)
-                {
-                    ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale =
-                        new Vector3(ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x - 0.001f,
-                        ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y,
-                        1f);
-                }
+                if (rect.transform.localScale.x > 0.2f)  // Расширили min
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x - 0.01f, rect.transform.localScale.y, 1f);  // Ускорили шаг
             }
+
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                if (ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x < 0.9f)
-                {
-                    ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale =
-                        new Vector3(ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x + 0.001f,
-                        ObjectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y,
-                        1f);
-                }
+                if (rect.transform.localScale.x < 1.2f)  // Расширили max
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x + 0.01f, rect.transform.localScale.y, 1f);  // Ускорили шаг
             }
         }
     }
