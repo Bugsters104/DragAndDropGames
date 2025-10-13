@@ -27,7 +27,7 @@ public class TickerScript : MonoBehaviour
 
         TimeSpan time = TimeSpan.FromSeconds((int)timeTicked);
 
-        tickerTextString.text = time.ToString(@"mm\:ss");
+        tickerTextString.text = time.ToString(@"hh\:mm\:ss");
         
     }
 }
