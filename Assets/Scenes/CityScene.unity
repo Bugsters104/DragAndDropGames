@@ -3020,6 +3020,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e8456068517193d4c958da26b86bfb9f, type: 3}
   - {fileID: 8300000, guid: e19c05ae5b498bc4fa1a3b9cc2c0cf21, type: 3}
   - {fileID: 8300000, guid: d0af6997f38be8a48958c90fa374a095, type: 3}
+  - {fileID: 8300000, guid: 4f8d4f7180a69e442aae14e27ed741d7, type: 3}
   rightPlace: 0
   victoryPanel: {fileID: 437911149}
   defeatPanel: {fileID: 151211134}
@@ -3118,6 +3119,7 @@ MonoBehaviour:
   - {fileID: 3668543011661473778, guid: d438340ba6b4b4e4a9a3fdf2b9119a7f, type: 3}
   - {fileID: 8841969917098735227, guid: 4a618be6c59254740bd54b1cb7366346, type: 3}
   - {fileID: 3051994102135457867, guid: 0f06c89804d44ab47b730bac396b2b5f, type: 3}
+  - {fileID: 9166183619724403579, guid: b52dbe8e1623aa149bc9a21858733b8c, type: 3}
   obstaclesPrefabs:
   - {fileID: 4433039038963346497, guid: 670ddeda1d6e78044b36e6af9dbfd9c9, type: 3}
   - {fileID: 7803275153951377341, guid: b7436772d9729d444871dc567af2fca4, type: 3}
