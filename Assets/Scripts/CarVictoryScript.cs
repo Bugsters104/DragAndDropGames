@@ -3,6 +3,14 @@ using UnityEngine.UI;
 
 public class CarVictoryScript : MonoBehaviour
 {
+    public static GameObject hangarHud;
+    public static GameObject gameEndHud;
+
+
+    public GameObject hangar;
+    public GameObject gameEnd;
+
+
     public GameObject counterTextObject;
 
     private static Text counterText;
@@ -25,11 +33,19 @@ public class CarVictoryScript : MonoBehaviour
 
         if (counter != realMax) return;
 
-        if (lostCar) {
-            Debug.Log("Nooooooooooooo!");                        
+        if (lostCar) {    
+         
         } else {
-            Debug.Log("Victory!");
+
         }
+
+        hangarHud.SetActive(false);    
+        gameEndHud.SetActive(true);    
+
+
+       // GameObject hangr = hangarHud.GetComponentsInChildren.Find("HangarText");
+
+//        Debug.Log(hangarHud.Find<GameObject>("CounterText"));
     }
 
     public static  void decreaseMax() {
@@ -56,6 +72,12 @@ public class CarVictoryScript : MonoBehaviour
         lostCar = false;
 
         counterText = counterTextObject.GetComponent<Text>();
+
+
+        hangarHud = hangar;
+        gameEndHud = gameEnd;
+
+
         counterText.text = "0 / " + realMax;
     }
 
