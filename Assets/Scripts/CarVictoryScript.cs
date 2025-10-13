@@ -33,16 +33,19 @@ public class CarVictoryScript : MonoBehaviour
 
         if (counter != realMax) return;
 
-        if (lostCar) {    
-         
-        } else {
+        TickerScript.mustTick = false;
 
+        if (lostCar) {
+            gameEndHud.transform.Find("EndText").GetComponent<Text>().text = "Neuzvarēji!\n" + counter + " / " + realMax + " (" + max + ")" + "\n" + hangarHud.transform.Find("TimeText").GetComponent<Text>().text;
+        } else {
+            gameEndHud.transform.Find("EndText").GetComponent<Text>().text = "Uzvarēji!\n" + counter + " / " + realMax + "\n" + hangarHud.transform.Find("TimeText").GetComponent<Text>().text;
         }
+
 
         hangarHud.SetActive(false);    
         gameEndHud.SetActive(true);    
 
-
+// .transform.FindChild("EndText").gameObject
        // GameObject hangr = hangarHud.GetComponentsInChildren.Find("HangarText");
 
 //        Debug.Log(hangarHud.Find<GameObject>("CounterText"));
