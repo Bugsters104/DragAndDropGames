@@ -997,6 +997,7 @@ GameObject:
   - component: {fileID: 1310376413}
   - component: {fileID: 1310376414}
   - component: {fileID: 1310376415}
+  - component: {fileID: 1310376416}
   m_Layer: 0
   m_Name: ScripHolder
   m_TagString: Untagged
@@ -1120,7 +1121,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eaec0ed2ab6a01699e9d200f40392af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counterTextObject: {fileID: 1478345838}
   carContainer: {fileID: 1426755931}
+--- !u!114 &1310376416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310376409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c40964b48b90442ca5c62544a4baa42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TickerText: {fileID: 2032425154}
 --- !u!1 &1426755931
 GameObject:
   m_ObjectHideFlags: 0

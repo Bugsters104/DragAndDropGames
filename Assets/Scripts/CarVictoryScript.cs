@@ -21,10 +21,6 @@ public class CarVictoryScript : MonoBehaviour
     public GameObject carContainer;
 
     private static void checkVictory() {
-
-       // counterText.GetComponent<Text>().text = counter +" / " + realMax;
-
-        //counterText.GetComponent<Text>().text = "0 / " + realMax;
         counterText.text = counter + " / " + realMax;
 
         if (counter != realMax) return;
@@ -39,6 +35,8 @@ public class CarVictoryScript : MonoBehaviour
     public static  void decreaseMax() {
         lostCar = true;
         realMax--;
+
+        counterText.color = new Color(.8f, .3f, .3f, 1f);
 
         checkVictory();
     }
