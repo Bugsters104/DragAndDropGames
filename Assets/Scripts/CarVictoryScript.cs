@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarVictoryScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject counterTextObject;
 
+    private static Text counterText;
+
+    [HideInInspector]
     public static bool lostCar;
 
     [HideInInspector]
@@ -18,7 +22,10 @@ public class CarVictoryScript : MonoBehaviour
 
     private static void checkVictory() {
 
-        Debug.Log(counter + " / " + realMax);
+       // counterText.GetComponent<Text>().text = counter +" / " + realMax;
+
+        //counterText.GetComponent<Text>().text = "0 / " + realMax;
+        counterText.text = counter + " / " + realMax;
 
         if (counter != realMax) return;
 
@@ -44,10 +51,14 @@ public class CarVictoryScript : MonoBehaviour
 
     void Start()
     {
+        
         max = carContainer.GetComponent<Transform>().childCount;
         realMax = max;
         counter = 0;
         lostCar = false;
+
+        counterText = counterTextObject.GetComponent<Text>();
+        counterText.text = "0 / " + realMax;
     }
 
     // Update is called once per frame
