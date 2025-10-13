@@ -9,6 +9,9 @@ public class ObstaclesControllerScript : MonoBehaviour
     public float waveAmplitude = 25f;
     public float waveFrequency = 1f;
     public float fadeDuration = 1.5f;
+
+    private CarVictoryScript carVictoryScript;
+
     private ObjectScript objectScript;
     private ScreenBoundriesScript screenBoundriesScript;
     private CanvasGroup canvasGroup;
@@ -32,6 +35,11 @@ public class ObstaclesControllerScript : MonoBehaviour
         orginalColor = image.color;
 
         objectScript = Object.FindFirstObjectByType<ObjectScript>();
+        
+        carVictoryScript = Object.FindFirstObjectByType<CarVictoryScript>();
+
+        //        Debug.Log(carVictoryScript.lostCar);
+
         screenBoundriesScript = Object.FindFirstObjectByType<ScreenBoundriesScript>();
         StartCoroutine(FadeIn());
     }
@@ -195,6 +203,10 @@ public class ObstaclesControllerScript : MonoBehaviour
         // Ko darīt ar māšinu tālāk?
         // Nav obligāti jāiznīcina, varbūt jāatgriež sākuma pozīcijā?
         Destroy(target);
+
+
+
+        CarVictoryScript.decreaseMax();
     }
 
     IEnumerator RecoverColor(float seconds)

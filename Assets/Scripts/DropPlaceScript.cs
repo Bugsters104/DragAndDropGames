@@ -9,6 +9,9 @@ public class DropPlaceScript : MonoBehaviour, IDropHandler
     public ObjectScript objScript;
 
 
+    private CarVictoryScript carVictoryScript;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnDrop(PointerEventData eventData)
     {
@@ -35,7 +38,12 @@ public class DropPlaceScript : MonoBehaviour, IDropHandler
 
                 if((rotDiff <= 5 || (rotDiff >= 355 && rotDiff <= 360)) &&
                     (xSizeDiff <= 0.05 && ySizeDiff <= 0.05)) {
+
+
+                    CarVictoryScript.increment();
                     Debug.Log("Correct place");
+
+
                     objScript.rightPlace = true;
                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = 
                         GetComponent<RectTransform>().anchoredPosition;

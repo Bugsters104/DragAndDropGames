@@ -15,12 +15,16 @@ public class ObjectScript : MonoBehaviour
     public static GameObject lastDragged = null;
     public static bool drag = false;
 
+    //public static CarVictoryScript carVictoryScript;
 
     void Awake()
     {
         startCoordinates = new Vector2[vehicles.Length];
         Debug.Log(vehicles.Length);
         Debug.Log(startCoordinates.Length);
+
+        //carVictoryScript = Object.FindFirstObjectByType<carVictoryScript>();
+
         for (int i = 0; i < vehicles.Length; i++)
         {
             startCoordinates[i] = vehicles[i].GetComponent<RectTransform>().localPosition;
