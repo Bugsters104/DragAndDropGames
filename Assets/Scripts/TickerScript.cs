@@ -16,6 +16,8 @@ public class TickerScript : MonoBehaviour
     void Start()
     {
         tickerTextString = TickerText.GetComponent<Text>();
+        timeTicked = 0;
+        mustTick = true;
     }
 
     // Update is called once per frame

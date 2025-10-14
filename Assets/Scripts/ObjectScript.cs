@@ -20,6 +20,11 @@ public class ObjectScript : MonoBehaviour
     void Awake()
     {
         startCoordinates = new Vector2[vehicles.Length];
+
+        rightPlace = false;
+        lastDragged = null;
+        drag = false;
+    
         Debug.Log(vehicles.Length);
         Debug.Log(startCoordinates.Length);
 
