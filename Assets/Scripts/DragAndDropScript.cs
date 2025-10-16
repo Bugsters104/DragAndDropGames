@@ -10,7 +10,6 @@ public class DragAndDropScript : MonoBehaviour, IPointerDownHandler, IBeginDragH
     public ObjectScript objectScr;
     public ScreenBoundriesScript screenBou;
 
-    // Start is called before the first frame update
     void Start()
     {
         canvasGro = GetComponent<CanvasGroup>();
@@ -35,7 +34,6 @@ public class DragAndDropScript : MonoBehaviour, IPointerDownHandler, IBeginDragH
             canvasGro.blocksRaycasts = false;
             canvasGro.alpha = 0.6f;
 
-            // Поднимаем наверх
             transform.SetSiblingIndex(transform.parent.childCount - 1);
 
             Vector3 cursorWorldPos = Camera.main.ScreenToWorldPoint(

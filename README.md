@@ -1,7 +1,26 @@
 # DragAndDropGames
 Unity 2D Drag And Drop games for children +6
 
-**To do list:
+A simple and colorful 2D Unity game where players drag cars onto their correct places on the map.
+The game includes sound effects, animations, and an interactive main menu.
+
+![Main Menu](readmeimages/main_menu.png)
+
+Features
+
+* 🏙️ City map with interactive objects
+* 🚗 Drag & Drop mechanics
+* 🔊 Fun sound effects
+* ⏱️ Game timer (HH:MM:SS)
+* ✈️ Moving obstacles
+* 🎬 Animated main menu (3 buttons + effects)
+* 📸 Camera zoom & movement limits
+
+![Main Menu](readmeimages/game1.png)
+
+🛠️ To-Do Progress
+
+Development checklist:
 - [x] Create the necessary folders 
 - [x] Add necessary assets 
 - [x] Add cars on the map
@@ -15,3 +34,5 @@ Unity 2D Drag And Drop games for children +6
 - [x] Create C# script for scene change and quit option
 - [x] Create game timer (HH:MM:SS)
 - [x] Add flying obstacle in a city scene
+
+Created by Artjoms

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;  // Для Image (звёзды)
-using TMPro;  // Для TMP_Text
+using UnityEngine.UI;  
+using TMPro;  
 
 public class ObjectScript : MonoBehaviour
 {
@@ -15,18 +15,16 @@ public class ObjectScript : MonoBehaviour
     public static GameObject lastDragged = null;
     public static bool drag = false;
 
-    // Для завершения игры
-    private bool[] isPlaced;  // Для каждой машины
+    private bool[] isPlaced;  
     private int placedCount = 0;
     public GameObject victoryPanel;
     public GameObject defeatPanel;
-    private Timer timer;  // Получаем с того же объекта
-    public Image[] stars;  // Массив 3 звёзд (Image UI)
-    public TMP_Text victoryTimeText;  // TMP_Text для времени
+    private Timer timer;  
+    public Image[] stars;  
+    public TMP_Text victoryTimeText;  
 
     void Awake()
     {
-        // Получаем Timer с того же объекта (Script Holder)
         timer = GetComponent<Timer>();
         if (timer == null)
         {
@@ -42,7 +40,7 @@ public class ObjectScript : MonoBehaviour
             return;
         }
 
-        isPlaced = new bool[vehicles.Length];  // Инициализируем массив
+        isPlaced = new bool[vehicles.Length];  
 
         startCoordinates = new Vector2[vehicles.Length];
         for (int i = 0; i < vehicles.Length; i++)

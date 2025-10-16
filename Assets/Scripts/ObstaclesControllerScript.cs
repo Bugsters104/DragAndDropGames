@@ -37,7 +37,6 @@ public class ObstaclesControllerScript : MonoBehaviour
         if (TryGetComponent<CircleCollider2D>(out var col))
             col.isTrigger = true;
 
-        // Сбрасываем параметр в аниматоре при старте
         if (TryGetComponent<Animator>(out Animator anim))
             anim.SetBool("explode", false);
     }
@@ -57,14 +56,12 @@ public class ObstaclesControllerScript : MonoBehaviour
             }
         }
 
-        // 💣 Взрыв при наведении мыши
         if (CompareTag("Bomb") && !isExploding &&
             RectTransformUtility.RectangleContainsScreenPoint(rectTransform, Input.mousePosition, Camera.main))
         {
             TriggerExplosion();
         }
 
-        // 💡 Обработка перетаскивания
         if (ObjectScript.drag && !isFadingOut &&
             RectTransformUtility.RectangleContainsScreenPoint(rectTransform, Input.mousePosition, Camera.main))
         {
@@ -88,7 +85,7 @@ public class ObstaclesControllerScript : MonoBehaviour
         if (isExploding) return;
         isExploding = true;
 
-        image.color = Color.red; // подсвечиваем перед взрывом
+        image.color = Color.red; 
 
         if (TryGetComponent<Animator>(out Animator animator))
         {
@@ -98,17 +95,14 @@ public class ObstaclesControllerScript : MonoBehaviour
         objectScript.effects.PlayOneShot(objectScript.audioCli[15], 5f);
         StartCoroutine(Vibrate());
 
-        // 💥 Радиус взрыва
         float radius = 0f;
         if (TryGetComponent<CircleCollider2D>(out CircleCollider2D circleCollider))
             radius = circleCollider.radius * transform.lossyScale.x;
 
         ExplodeAndDestroyNearbyObjects(radius);
 
-        // 🔁 Сбрасываем explode, чтобы можно было переиспользовать
         StartCoroutine(ResetBool());
 
-        // 🕒 Через 1.2 секунды исчезает
         StartCoroutine(FadeOutAndDestroyDelayed(1.2f));
     }
 

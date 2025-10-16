@@ -22,26 +22,26 @@ public class TransformationScript : MonoBehaviour
 
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                if (rect.transform.localScale.y < 1.2f)  // Расширили max
-                    rect.transform.localScale = new Vector3(rect.transform.localScale.x, rect.transform.localScale.y + 0.01f, 1f);  // Ускорили шаг
+                if (rect.transform.localScale.y < 1.2f)  
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x, rect.transform.localScale.y + 0.01f, 1f);  
             }
 
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                if (rect.transform.localScale.y > 0.2f)  // Расширили min
-                    rect.transform.localScale = new Vector3(rect.transform.localScale.x, rect.transform.localScale.y - 0.01f, 1f);  // Ускорили шаг
+                if (rect.transform.localScale.y > 0.2f)  
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x, rect.transform.localScale.y - 0.01f, 1f); 
             }
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                if (rect.transform.localScale.x > 0.2f)  // Расширили min
-                    rect.transform.localScale = new Vector3(rect.transform.localScale.x - 0.01f, rect.transform.localScale.y, 1f);  // Ускорили шаг
+                if (rect.transform.localScale.x > 0.2f)  
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x - 0.01f, rect.transform.localScale.y, 1f);  
             }
 
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                if (rect.transform.localScale.x < 1.2f)  // Расширили max
-                    rect.transform.localScale = new Vector3(rect.transform.localScale.x + 0.01f, rect.transform.localScale.y, 1f);  // Ускорили шаг
+                if (rect.transform.localScale.x < 1.2f)  
+                    rect.transform.localScale = new Vector3(rect.transform.localScale.x + 0.01f, rect.transform.localScale.y, 1f);  
             }
         }
     }
